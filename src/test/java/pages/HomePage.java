@@ -1,12 +1,12 @@
 package pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.io.InputStream;
 import java.net.URL;
+import java.time.Duration;
 import java.util.*;
 
 public class HomePage {
@@ -15,11 +15,15 @@ public class HomePage {
     private By emailId = By.id("inputEmail");
     private By passwordId = By.id("inputPassword");
     private By signInButtonCss = By.cssSelector(".form-signin button.btn-primary");
+    private By testDivHeaderTag = By.tagName("h1");
     private By listGroupClass = By.className("list-group");
     private By listGroupItemClass = By.className("list-group-item");
     private By listGroupItemBadgeClass = By.className("badge");
     private By dropDownButtonClass = By.id("dropdownMenuButton");
     private By dropDownOptionCss = By.cssSelector(".dropdown-item:contains('text')");
+    private By buttonTag = By.tagName("button");
+    private By dispalyButtonId = By.id("test5-button");
+    private By tableBodyCss = By.cssSelector(".table tbody");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -56,6 +60,10 @@ public class HomePage {
 
     public WebElement getTestDiv(int number) {
         return driver.findElement(By.id(String.format("test-%s-div", number)));
+    }
+
+    public String getTestDivLabel(int number) {
+        return getTestDiv(number).findElement(testDivHeaderTag).getText();
     }
 
     // Test 1
@@ -137,9 +145,59 @@ public class HomePage {
 
     // Test 4
 
+    public List<WebElement> getTestDivButtons() {
+        WebElement testDiv = getTestDiv(4);
+        return testDiv.findElements(buttonTag);
+    }
+
     // Test 5
 
+    public WebElement getTestDivDisplayButton() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        try {
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(dispalyButtonId));
+        } catch (TimeoutException e){
+            System.out.println("Timed out while waiting for button to be displayed in Test Div 5.");
+        }
+
+        return null;
+    }
+
+    public void clickTestDivDisplayButton() {
+        WebElement button = getTestDivDisplayButton();
+        if (button != null && button.isEnabled()) {
+            button.click();
+        }
+    }
+
+    public String getAlertText() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        try {
+            wait.until(ExpectedConditions.alertIsPresent());
+
+            Alert alert = driver.switchTo().alert();
+            return alert.getText();
+        } catch (TimeoutException e){
+            System.out.println("Timed out while waiting for alert on button click in Test Div 5.");
+        }
+
+        return null;
+    }
+
     // Test 6
+
+    public WebElement getTestDivTableBody() {
+        WebElement testDiv = getTestDiv(6);
+        return testDiv.findElement(tableBodyCss);
+    }
+
+    public String getTestDivTableCellValue(int rowIndex, int columnIndex) {
+        WebElement tableBody = getTestDivTableBody();
+        WebElement cell = tableBody.findElement(By.xpath(String.format(".//tr[\"%s\"]/td[\"%s\"]", rowIndex+1, columnIndex+1)));
+        return cell.getText();
+    }
 
     // Common
 

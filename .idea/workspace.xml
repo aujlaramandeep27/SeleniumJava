@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd64303c-bf90-4bb2-86ec-939a310fc0c5" name="Changes" comment="Added test page and guidelines">
+    <list default="true" id="cd64303c-bf90-4bb2-86ec-939a310fc0c5" name="Changes" comment="Creating home page selectors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/home.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/home.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/HomeSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/HomeSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "aujlaramandeep27"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:aujlaramandeep27/SeleniumJava.git",
+    "accountId": "5bb23d79-58a6-4790-96f8-95476fafd554"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 0
 }]]></component>
@@ -111,12 +121,32 @@
       <option name="project" value="LOCAL" />
       <updated>1729523107487</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Creating home page selectors">
+      <option name="closed" value="true" />
+      <created>1729545201498</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729545201498</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created Java project with selenium" />
     <MESSAGE value="Added test page and guidelines" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added test page and guidelines" />
+    <MESSAGE value="Creating home page selectors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating home page selectors" />
   </component>
 </project>
