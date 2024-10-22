@@ -1,7 +1,9 @@
-# Cucumber Selenium Project
+# Selenium Java Project
 
-This project is an automation framework using Cucumber and Selenium for testing web applications. 
+This java project is an automation framework using Selenium and Cucumber for testing web applications. 
 It follows the Behavior-Driven Development (BDD) approach, allowing you to write tests in plain language.
+
+To find the **automated tests** from **technical assignment** for `Home` page, please open file `home.feature` at path `src/test/java/features`
 
 ## Table of Contents
 
@@ -84,7 +86,8 @@ SeleniumJava/
 
 ## Writing Features
 
-Feature files are written in Gherkin syntax. 
+Feature files contain the automated tests organized by features.
+These files are written in Gherkin syntax. 
 Each feature file should be placed in the `src/test/java/features` directory
 
 ## Running Tests
