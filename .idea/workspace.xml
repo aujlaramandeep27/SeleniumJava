@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd64303c-bf90-4bb2-86ec-939a310fc0c5" name="Changes" comment="Automated all the test cases">
+    <list default="true" id="cd64303c-bf90-4bb2-86ec-939a310fc0c5" name="Changes" comment="Cleanup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runners/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/TestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/HomeSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/HomeSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +60,7 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Test 4 - Validate buttons">
+  <component name="RunManager" selected="Cucumber Java.Feature: home">
     <configuration name="Feature: home" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/home.feature" />
@@ -163,8 +162,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: Test 4 - Validate buttons" />
         <item itemvalue="Cucumber Java.Feature: home" />
+        <item itemvalue="Cucumber Java.Scenario: Test 4 - Validate buttons" />
         <item itemvalue="Cucumber Java.Scenario: Test 3 - Validate dropdown and select an option" />
         <item itemvalue="Cucumber Java.Scenario: Test 6 - Find and validate value in table cell" />
         <item itemvalue="Cucumber Java.Scenario: Validate sign in form" />
@@ -220,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729622368032</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Cleanup">
+      <option name="closed" value="true" />
+      <created>1729622658396</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1729622658396</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -240,6 +247,7 @@
     <MESSAGE value="Creating home page selectors" />
     <MESSAGE value="Added selectors for remaining test divs" />
     <MESSAGE value="Automated all the test cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="Automated all the test cases" />
+    <MESSAGE value="Cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
   </component>
 </project>
