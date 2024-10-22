@@ -40,26 +40,46 @@ Before you begin, ensure you have met the following requirements:
 
 ## Installation
 
-1. **Clone the repository**:
-   ```bash
-   git clone git@github.com:aujlaramandeep27/SeleniumJava.git
-   cd SeleniumJava
+**Clone the repository**:
+
+    bash
+    git clone git@github.com:aujlaramandeep27/SeleniumJava.git
+    cd SeleniumJava
    
 ## Project Structure
 
 SeleniumJava/
-├── src/
-│   ├── main/
-│   └── test/
-│       ├── java/
-│       │   └── feature/
-│       
-├── pom.xml
-└── README.md
+
+    ├── src
+    │   ├── main
+    │   │   ├── java
+    │   │   │   └── org
+    │   │   │       └── aujlaramandeep27
+    │   │   │           └── Main.java
+    │   │   └── resources
+    │   │       ├── QE-guide.html
+    │   │       └── QE-index.html
+    │   └── test
+    │       └── java
+    │           ├── features
+    │           │   └── home.feature
+    │           ├── pages
+    │           │   └── HomePage.java
+    │           ├── runners
+    │           │   └── TestRunner.java
+    │           └── steps
+    │               ├── DriverFactory.java
+    │               ├── HomeSteps.java
+    │               └── Hooks.java
+    ├── target
+    ├── README.md
+    └── pom.xml
 
 - `src/test/resources/features`: Contains .feature files written in Gherkin syntax.
-- `src/test/java/steps`: Contains Java classes for step definitions.
 - `src/test/java/pages`: Contains Java classes for web pages.
+- `src/test/java/runners`: Contains tests runner configuration.
+- `src/test/java/steps`: Contains Java classes for step definitions.
+- `target`: Contains build artifacts and test reports.
 - `pom.xml`: Maven configuration file for dependencies.
 
 ## Writing Features
