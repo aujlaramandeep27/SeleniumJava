@@ -12,16 +12,18 @@ import java.util.*;
 public class HomePage {
     private WebDriver driver;
 
+    private By loginTitleCss = By.cssSelector(".form-signin h2");
     private By emailId = By.id("inputEmail");
     private By passwordId = By.id("inputPassword");
-    private By signInButtonCss = By.cssSelector(".form-signin button.btn-primary");
+    private By loginButtonCss = By.cssSelector(".form-signin button.btn-primary");
     private By testDivHeaderTag = By.tagName("h1");
     private By listGroupClass = By.className("list-group");
     private By listGroupItemClass = By.className("list-group-item");
     private By listGroupItemBadgeClass = By.className("badge");
-    private By dropDownButtonClass = By.id("dropdownMenuButton");
-    private By dropDownOptionCss = By.cssSelector(".dropdown-item:contains('text')");
+    private By dropDownButtonId = By.id("dropdownMenuButton");
+    private By dropDownMenuClass = By.className("dropdown-menu");
     private By buttonTag = By.tagName("button");
+    private By alertId = By.id("test5-alert");
     private By dispalyButtonId = By.id("test5-button");
     private By tableBodyCss = By.cssSelector(".table tbody");
 
@@ -56,10 +58,10 @@ public class HomePage {
         return driver.getTitle();
     }
 
-    // Test Div
+    // Test Case
 
     public WebElement getTestDiv(int number) {
-        return driver.findElement(By.id(String.format("test-%s-div", number)));
+        return driver.findElement(By.id(String.format("test-%d-div", number)));
     }
 
     public String getTestDivLabel(int number) {
@@ -70,6 +72,10 @@ public class HomePage {
 
     public WebElement getTestDivLogin() {
         return getTestDiv(1);
+    }
+
+    public String getLoginTitle() {
+        return getTestDivLogin().findElement(loginTitleCss).getText();
     }
 
     public WebElement getEmailField() {
@@ -84,21 +90,16 @@ public class HomePage {
         return getTestDivLogin().findElement(passwordId);
     }
 
-    public void setPasswordId(String value) {
+    public void setPassword(String value) {
         clearAndSetFieldValue(getPasswordField(), value);
     }
 
-    public WebElement getSignInButton() {
-        return getTestDivLogin().findElement(signInButtonCss);
-    }
-
-    public void clickSignIn() {
-        getSignInButton().click();
+    public WebElement getLoginButton() {
+        return getTestDivLogin().findElement(loginButtonCss);
     }
 
     // Test 2
 
-    // '#test-2-div ul li:nth-of-type(2) .badge'
     public WebElement getTestDivList() {
         WebElement testDiv = getTestDiv(2);
         return testDiv.findElement(listGroupClass);
@@ -126,21 +127,33 @@ public class HomePage {
 
     // Test 3
 
-    public WebElement getTestDivDropdown() {
+    public WebElement getTestDivDropdownButton() {
         WebElement testDiv = getTestDiv(3);
-        return testDiv.findElement(dropDownButtonClass);
+        return testDiv.findElement(dropDownButtonId);
     }
 
-    public String getTestDivDropdownValue() {
-        return getTestDivDropdown().getText().trim();
+    public void clickTestDivDropdownButton() {
+        getTestDivDropdownButton().click();
     }
 
-    public void clickTestDivDropdown() {
-        getTestDivDropdown().click();
+    public WebElement getTestDivDropdownMenu() {
+        WebElement testDiv = getTestDiv(3);
+        return testDiv.findElement(dropDownMenuClass);
     }
 
     public void selectTestDivDropdownValue(String value) {
-        getTestDivDropdown().findElement(By.cssSelector(String.format(".dropdown-item:contains('%s')", value))).click();
+        WebElement dropdownMenu = getTestDivDropdownMenu();
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        try {
+            // wait for dropdown menu to appear
+            wait.until(ExpectedConditions.visibilityOf(dropdownMenu));
+            // select option from dropdown menu
+            WebElement option = dropdownMenu.findElement(By.xpath(String.format(".//a[contains(text(), '%s')]", value)));
+            option.click();
+        } catch (TimeoutException e){
+            System.out.println("Timed out while waiting for dropdown menu to be displayed in Test Div 3.");
+        }
     }
 
     // Test 4
@@ -154,13 +167,11 @@ public class HomePage {
 
     public WebElement getTestDivDisplayButton() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
         try {
             return wait.until(ExpectedConditions.visibilityOfElementLocated(dispalyButtonId));
         } catch (TimeoutException e){
             System.out.println("Timed out while waiting for button to be displayed in Test Div 5.");
         }
-
         return null;
     }
 
@@ -175,14 +186,11 @@ public class HomePage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         try {
-            wait.until(ExpectedConditions.alertIsPresent());
-
-            Alert alert = driver.switchTo().alert();
-            return alert.getText();
+            WebElement alert = wait.until(ExpectedConditions.visibilityOfElementLocated(alertId));
+            return alert.getText().trim();
         } catch (TimeoutException e){
             System.out.println("Timed out while waiting for alert on button click in Test Div 5.");
         }
-
         return null;
     }
 
@@ -195,7 +203,7 @@ public class HomePage {
 
     public String getTestDivTableCellValue(int rowIndex, int columnIndex) {
         WebElement tableBody = getTestDivTableBody();
-        WebElement cell = tableBody.findElement(By.xpath(String.format(".//tr[\"%s\"]/td[\"%s\"]", rowIndex+1, columnIndex+1)));
+        WebElement cell = tableBody.findElement(By.xpath(String.format(".//tr[%d]/td[%d]", rowIndex + 1, columnIndex + 1)));
         return cell.getText();
     }
 
@@ -206,12 +214,10 @@ public class HomePage {
         field.sendKeys(value);
     }
 
-    public WebElement getLabelForId(String id) {
-         return driver.findElement(By.xpath("//label[@for='"+id+"']"));
-    }
-
-    public String getLabelText(WebElement element) {
-        return element.getText();
+    public WebElement getLabelFor(WebElement element) {
+        String id = element.getAttribute("id");
+        String selector = String.format("//label[@for='%s']", id);
+        return driver.findElement(By.xpath(selector));
     }
 
     public String getElementTextWithoutChild(WebElement element) {

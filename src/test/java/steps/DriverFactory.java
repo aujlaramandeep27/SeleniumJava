@@ -13,7 +13,6 @@ public class DriverFactory {
         if (driver == null) {
 //            System.setProperty("webdriver.chrome.driver", "/opt/homebrew/bin/chromedriver"); // Update this path
             driver = new ChromeDriver();
-
         }
         return driver;
     }

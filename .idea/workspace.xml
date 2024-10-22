@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd64303c-bf90-4bb2-86ec-939a310fc0c5" name="Changes" comment="Creating home page selectors">
+    <list default="true" id="cd64303c-bf90-4bb2-86ec-939a310fc0c5" name="Changes" comment="Added selectors for remaining test divs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/home.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/home.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/DriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/HomeSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/HomeSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,21 +26,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "aujlaramandeep27"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;aujlaramandeep27&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:aujlaramandeep27/SeleniumJava.git",
-    "accountId": "5bb23d79-58a6-4790-96f8-95476fafd554"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:aujlaramandeep27/SeleniumJava.git&quot;,
+    &quot;accountId&quot;: &quot;5bb23d79-58a6-4790-96f8-95476fafd554&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2nkemLQ05XHlz8mmzx0PH85DxZT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -47,6 +50,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Cucumber Java.Feature: home.executor": "Run",
+    "Cucumber Java.Scenario: Test 3 - Validate dropdown and select an option.executor": "Run",
+    "Cucumber Java.Scenario: Test 6 - Find and validate value in table cell.executor": "Run",
+    "Cucumber Java.Scenario: Validate sign in form.executor": "Run",
     "Cucumber Java.Scenario: Verify homepage title.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -55,13 +62,79 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Verify homepage title">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+  <component name="RunManager" selected="Cucumber Java.Feature: home">
+    <configuration name="Feature: home" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/home.feature" />
+      <option name="GLUE" value="steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="SeleniumJava" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: home" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Test 3 - Validate dropdown and select an option" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/home.feature" />
+      <option name="GLUE" value="steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="SeleniumJava" />
+      <option name="NAME_FILTER" value="^Test 3 \- Validate dropdown and select an option$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Test 3 \- Validate dropdown and select an option$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Test 3 - Validate dropdown and select an option" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Test 6 - Find and validate value in table cell" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/home.feature" />
+      <option name="GLUE" value="steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="SeleniumJava" />
+      <option name="NAME_FILTER" value="^Test 6 \- Find and validate value in table cell$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Test 6 \- Find and validate value in table cell$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Test 6 - Find and validate value in table cell" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Validate sign in form" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/home.feature" />
+      <option name="GLUE" value="steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="SeleniumJava" />
+      <option name="NAME_FILTER" value="^Validate sign in form$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Validate sign in form$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Validate sign in form" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,8 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Feature: home" />
+        <item itemvalue="Cucumber Java.Scenario: Test 3 - Validate dropdown and select an option" />
+        <item itemvalue="Cucumber Java.Scenario: Test 6 - Find and validate value in table cell" />
+        <item itemvalue="Cucumber Java.Scenario: Validate sign in form" />
         <item itemvalue="Cucumber Java.Scenario: Verify homepage title" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -129,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729545201498</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added selectors for remaining test divs">
+      <option name="closed" value="true" />
+      <created>1729554782728</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729554782728</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -147,6 +231,7 @@
     <MESSAGE value="Created Java project with selenium" />
     <MESSAGE value="Added test page and guidelines" />
     <MESSAGE value="Creating home page selectors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating home page selectors" />
+    <MESSAGE value="Added selectors for remaining test divs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added selectors for remaining test divs" />
   </component>
 </project>
