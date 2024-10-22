@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd64303c-bf90-4bb2-86ec-939a310fc0c5" name="Changes" comment="Added selectors for remaining test divs">
+    <list default="true" id="cd64303c-bf90-4bb2-86ec-939a310fc0c5" name="Changes" comment="Automated all the test cases">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/home.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/home.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/DriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/TestRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/HomeSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/HomeSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +50,7 @@
     "Application.Main.executor": "Run",
     "Cucumber Java.Feature: home.executor": "Run",
     "Cucumber Java.Scenario: Test 3 - Validate dropdown and select an option.executor": "Run",
+    "Cucumber Java.Scenario: Test 4 - Validate buttons.executor": "Run",
     "Cucumber Java.Scenario: Test 6 - Find and validate value in table cell.executor": "Run",
     "Cucumber Java.Scenario: Validate sign in form.executor": "Run",
     "Cucumber Java.Scenario: Verify homepage title.executor": "Run",
@@ -62,7 +61,7 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Cucumber Java.Feature: home">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Test 4 - Validate buttons">
     <configuration name="Feature: home" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/home.feature" />
@@ -91,6 +90,26 @@
       <option name="NAME_FILTER" value="^Test 3 \- Validate dropdown and select an option$" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Test 3 \- Validate dropdown and select an option$&quot;" />
       <option name="SUGGESTED_NAME" value="Scenario: Test 3 - Validate dropdown and select an option" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Test 4 - Validate buttons" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/home.feature" />
+      <option name="GLUE" value="steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="SeleniumJava" />
+      <option name="NAME_FILTER" value="^Test 4 \- Validate buttons$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Test 4 \- Validate buttons$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Test 4 - Validate buttons" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -142,33 +161,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Verify homepage title" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/home.feature" />
-      <option name="GLUE" value="steps" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="SeleniumJava" />
-      <option name="NAME_FILTER" value="^Verify homepage title$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify homepage title$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Verify homepage title" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: Test 4 - Validate buttons" />
         <item itemvalue="Cucumber Java.Feature: home" />
         <item itemvalue="Cucumber Java.Scenario: Test 3 - Validate dropdown and select an option" />
         <item itemvalue="Cucumber Java.Scenario: Test 6 - Find and validate value in table cell" />
         <item itemvalue="Cucumber Java.Scenario: Validate sign in form" />
-        <item itemvalue="Cucumber Java.Scenario: Verify homepage title" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729554782728</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Automated all the test cases">
+      <option name="closed" value="true" />
+      <created>1729622368032</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729622368032</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,6 +239,7 @@
     <MESSAGE value="Added test page and guidelines" />
     <MESSAGE value="Creating home page selectors" />
     <MESSAGE value="Added selectors for remaining test divs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added selectors for remaining test divs" />
+    <MESSAGE value="Automated all the test cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Automated all the test cases" />
   </component>
 </project>

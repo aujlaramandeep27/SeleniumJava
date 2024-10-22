@@ -74,8 +74,8 @@ public class HomeSteps {
     public void item_in_the_listgroup_should_contain_value_and_badge_in_test_2(int itemNumber, String expValue, String expBadge) {
         // List is 0 based index
         int itemIndex = itemNumber - 1;
-        assertEquals("List item does not contain expected value", expValue, homePage.getTestDivListItemValue(itemIndex));
-        assertEquals("List item does not contain expected badge", expBadge, homePage.getTestDivListItemBadge(itemIndex));
+        assertEquals("Test 2 list item does not contain expected value", expValue, homePage.getTestDivListItemValue(itemIndex));
+        assertEquals("Test 2 list item does not contain expected badge", expBadge, homePage.getTestDivListItemBadge(itemIndex));
     }
 
     @Then("Test 3 should contain dropdown with default value {string}")
@@ -101,7 +101,7 @@ public class HomeSteps {
         // List is 0 based index
         int buttonIndex = buttonNumber - 1;
         WebElement button = homePage.getTestDivButtons().get(buttonIndex);
-        assertTrue("Button is not enabled Test 4", button.isEnabled());
+        assertTrue("Button is not enabled in Test 4", button.isEnabled());
     }
 
     @Then("button {int} should be disabled in Test 4")
@@ -109,25 +109,25 @@ public class HomeSteps {
         // List is 0 based index
         int buttonIndex = buttonNumber - 1;
         WebElement button = homePage.getTestDivButtons().get(buttonIndex);
-        assertFalse("Button is disabled Test 4", button.isEnabled());
+        assertFalse("Button is disabled in Test 4", button.isEnabled());
     }
 
     @Then("user waits to display button in Test 5")
     public void user_waits_to_display_button_in_test_5() {
         WebElement button = homePage.getTestDivDisplayButton();
-        assertNotNull("Button is not displayed Test 5", button);
+        assertNotNull("Button is not displayed in Test 5", button);
     }
 
     @Then("the button should be enabled in Test 5")
     public void the_button_should_be_enabled_in_test() {
         WebElement button = homePage.getTestDivDisplayButton();
-        assertTrue("Button is not enabled Test 5", button.isEnabled());
+        assertTrue("Button is not enabled in Test 5", button.isEnabled());
     }
 
     @Then("the button should be disabled in Test 5")
     public void the_button_should_be_disabled_in_test() {
         WebElement button = homePage.getTestDivDisplayButton();
-        assertFalse("Button is not disabled Test 5", button.isEnabled());
+        assertFalse("Button is not disabled in Test 5", button.isEnabled());
     }
 
     @When("user clicks the button in Test 5")
@@ -138,12 +138,12 @@ public class HomeSteps {
     @Then("an alert should display with message {string}")
     public void an_alert_should_display_with_message(String expMessage) {
         String actualMessage = homePage.getAlertText();
-        assertEquals("Alert does not contain expected message", expMessage, actualMessage);
+        assertEquals("Test 5 alert does not contain expected message", expMessage, actualMessage);
     }
 
     @Then("the table should contain {string} in cell with coordinates \\({int}, {int})")
     public void the_table_should_contain_in_cell_with_coordinates(String expValue, int row, int col) {
         String actualValue = homePage.getTestDivTableCellValue(row, col);
-        assertEquals("Table in test 6 does not contain expected cell value", expValue, actualValue);
+        assertEquals("Test 6 table does not contain expected cell value", expValue, actualValue);
     }
 }
