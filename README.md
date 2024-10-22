@@ -15,8 +15,6 @@ To find the **automated tests** from **technical assignment** for `Home` page, p
 - [Writing Features](#writing-features)
 - [Running Tests](#running-tests)
 - [Generating Reports](#generating-reports)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
