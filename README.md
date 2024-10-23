@@ -36,6 +36,7 @@ Before you begin, ensure you have met the following requirements:
 - **Maven** for dependency management
 - **WebDriver** for your browser (e.g., ChromeDriver for Google Chrome)
   - Ensure the WebDriver is in your system's PATH or specify the path in your test code.
+  - You can find the code to set up chrome driver in `src/test/java/steps/DriverFactory.java` at line 16
 - **IDE** (like IntelliJ IDEA or Eclipse)
 
 ## Installation

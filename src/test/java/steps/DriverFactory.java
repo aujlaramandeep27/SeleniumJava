@@ -11,7 +11,9 @@ public class DriverFactory {
 
     public static WebDriver getDriver() {
         if (driver == null) {
-//            System.setProperty("webdriver.chrome.driver", "/opt/homebrew/bin/chromedriver"); // Update this path
+//            If you don't have the chrome driver in your system's PATH,
+//            Update path_to_chrome_driver below to point to your chrome driver location
+//            System.setProperty("webdriver.chrome.driver", "path_to_chrome_driver");
             driver = new ChromeDriver();
         }
         return driver;
